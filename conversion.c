@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * print_char - Function to print chars.
+ * @arg: Aditional arguments given to the function.
+ *
+ * Return: A total count of the characters printed.
+ */
 int print_char(va_list arg)
 {
 	char letter;
@@ -9,6 +15,12 @@ int print_char(va_list arg)
 	return (1);
 }
 
+/**
+ * print_string - Function to print strings.
+ * @arg: Aditional arguments given to the function.
+ *
+ * Return: A total count of the characters printed.
+ */
 int print_string(va_list arg)
 {
 	char *string;
@@ -24,8 +36,14 @@ int print_string(va_list arg)
 	return (i);
 }
 
+/**
+ * print_percent - Function to print percent symbols.
+ * @arg: Aditional arguments given to the function.
+ *
+ * Return: A total count of the characters printed.
+ */
 int print_percent(__attribute__((unused))va_list arg)
 {
 	_putchar('%');
-	return(1);
+	return (1);
 }

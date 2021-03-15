@@ -9,8 +9,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j, r_val, printed_chars = 0;
 	va_list arg;
+	int chars_printed;
 	conversion_t tipos[] = {
 		{"c", print_char},
 		{"s", print_string},
@@ -21,42 +21,10 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(arg, format);
-	while (*(format + i))
-	{
-		j = 0;
-		if (format[i] == '%')
-		{
-			while (tipos[j].symbol != NULL)
-			{
-				if (format[i + 1] == *tipos[j].symbol)
-				{
-					r_val = tipos[j].print(arg);
-					if (r_val == -1)
-						return (-1);
-					printed_chars += r_val;
-					break;
-				}
-				j++;
-			}
-			if (tipos[j].symbol == NULL && format[i + 1] != ' ')
-			{
-				if (format[i + 1] != '\0')
-				{
-					_putchar(format[i]);
-					_putchar(format[i + 1]);
-					printed_chars += 2;
-				}
-				else
-					return (-1);
-			}
-			i++;
-		}
-		else
-		{
-			_putchar(format[i]);
-			printed_chars++;
-		}
-		i++;
-	}
-	return (printed_chars);
+
+	chars_printed = run_printf(format, tipos, arg);
+
+	va_end(arg);
+
+	return (chars_printed);
 }
