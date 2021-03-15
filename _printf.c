@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * _printf - Main string as input and all the necessary parameters to
+ * print a formated string.
+ * @format: A string containing all the desired characters.
+ *
+ * Return: A total count of the characters printed.
+ */
 int _printf(const char *format, ...)
 {
 	int i = 0, j, r_val, printed_chars = 0;
@@ -14,7 +21,6 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 	va_start(arg, format);
-
 	while (format && *(format + i))
 	{
 		j = 0;
@@ -31,6 +37,17 @@ int _printf(const char *format, ...)
 					break;
 				}
 				j++;
+			}
+			if (tipos[j].symbol == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					_putchar(format[i]);
+					_putchar(format[i + 1]);
+					printed_chars += 2;
+				}
+				else
+					return (-1);
 			}
 			i++;
 		}
