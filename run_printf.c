@@ -4,7 +4,7 @@
  * run_printf - Main string as input and all the necessary parameters to
  * print a formated string.
  * @format: A string containing all the desired characters.
- * @tipos: A table with all the format specifier with ther respective functions.
+ * @tipos: Table with format specifiers with ther respective functions.
  * @arg: Aditional arguments given to the function.
  *
  * Return: A total count of the characters printed.
@@ -15,7 +15,6 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 
 	while (*(format + i))
 	{
-
 		if (format[i] == '%')
 		{
 			j = 0;
