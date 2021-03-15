@@ -15,14 +15,11 @@ int _printf(const char *format, ...)
 		return (-1);
 	va_start(arg, format);
 
-	/* Itera a traves del primer argumento en busca de '%' */
 	while (format && *(format + i))
 	{
 		j = 0;
 		if (format[i] == '%')
 		{
-			/* Itera hasta encontrar el type 'c', 's' o '%' para relacionar con
-			   la funcion correspondiente segun la tabla 'conversion_t' */
 			while (tipos[j].symbol != NULL)
 			{
 				if (format[i + 1] == *tipos[j].symbol)
