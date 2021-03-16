@@ -28,6 +28,9 @@ int print_string(va_list arg)
 
 	string = va_arg(arg, char*);
 
+	if (str == NULL)
+		str = "(null)";
+
 	while (string[i])
 	{
 		isnot_putchar(string[i]);
