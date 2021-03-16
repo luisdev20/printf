@@ -100,7 +100,7 @@ int print_integer(va_list arg)
 int print_binary(va_list arg)
 {
 	unsigned int n, div = 1, bin = 0, num;
-	int len = 0, digit_count = 1, rem, i = 1;
+	unsigned int len = 0, digit_count = 1, rem, i = 1;
 
 	n = va_arg(arg, unsigned int);
 
