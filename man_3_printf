@@ -23,3 +23,15 @@ This _printf() function produces an output having in acount a some formats indic
 
 After gettin  succes in execution this functions return the number of character printed.
 
+.Sh Format
+
+It is used a character or identifier to give acces to a specific type of format wich are the way users are going to see their outputs
+
+example:
+
+_printf("%c",character);
+
+_printf("%d", decimal number);
+
+when a character is specified by putting a previous percent symbol it says the function to look for a subfunction to execute the conversion to that format.
+
