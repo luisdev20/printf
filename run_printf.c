@@ -13,7 +13,7 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 {
 	int i = 0, j, r_val, printed_chars = 0;
 
-	while (*(format + i))
+	while (format[i])
 	{
 		if (format[i] == '%')
 		{
