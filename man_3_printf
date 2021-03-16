@@ -35,3 +35,11 @@ _printf("%d", decimal number);
 
 when a character is specified by putting a previous percent symbol it says the function to look for a subfunction to execute the conversion to that format.
 
+.Sh The flag characters
+
+these are the main flags this function uses to print formated output:
+
+.It c
+
+gives a character formated to the standard out.
+
