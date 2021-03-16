@@ -13,14 +13,14 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 {
 	int i = 0, j, r_val, printed_chars = 0;
 
-	while (format[i])
+	while (*(format + i))
 	{
 		if (format[i] == '%')
 		{
 			j = 0;
 			while (tipos[j].symbol != NULL)
 			{
-				if (format[i + 1] == tipos[j].symbol[0])
+				if (format[i + 1] == *tipos[j].symbol)
 				{
 					r_val = tipos[j].print(arg);
 					if (r_val == -1)
@@ -34,8 +34,8 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 			{
 				if (format[i + 1] != '\0')
 				{
-					_putchar(format[i]);
-					_putchar(format[i + 1]);
+					isnot_putchar(format[i]);
+					isnot_putchar(format[i + 1]);
 					printed_chars += 2;
 				}
 				else
@@ -45,7 +45,7 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 		}
 		else
 		{
-			_putchar(format[i]);
+			isnot_putchar(format[i]);
 			printed_chars++;
 		}
 		i++;

@@ -18,7 +18,7 @@ typedef struct conversion
 } conversion_t;
 
 int _printf(const char *format, ...);
-int _putchar(char c);
+int isnot_putchar(char c);
 int print_char(va_list arg);
 int print_string(va_list arg);
 int print_percent(__attribute__((unused))va_list arg);

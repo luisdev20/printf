@@ -11,7 +11,7 @@ int print_char(va_list arg)
 	char letter;
 
 	letter = va_arg(arg, int);
-	_putchar(letter);
+	isnot_putchar(letter);
 	return (1);
 }
 
@@ -30,7 +30,7 @@ int print_string(va_list arg)
 
 	while (string[i])
 	{
-		_putchar(string[i]);
+		isnot_putchar(string[i]);
 		i++;
 	}
 	return (i);
@@ -44,6 +44,6 @@ int print_string(va_list arg)
  */
 int print_percent(__attribute__((unused))va_list arg)
 {
-	_putchar('%');
+	isnot_putchar('%');
 	return (1);
 }
