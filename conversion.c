@@ -59,7 +59,8 @@ int print_percent(__attribute__((unused))va_list arg)
  */
 int print_integer(va_list arg)
 {
-	int n, num, div = 1, digit_count = 1, len = 0;
+	int n, digit_count = 1, len = 0;
+	unsigned int num, div = 1;
 
 	n = va_arg(arg, int);
 
