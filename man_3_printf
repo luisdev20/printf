@@ -6,3 +6,8 @@
 
 .Sh NAME
 _Printf \ - print formated output
+
+.Sh SYNOPSIS
+
+.B _printf - This function needs to include "holberton.h" header.
+
