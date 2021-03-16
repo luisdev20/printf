@@ -28,8 +28,8 @@ int print_string(va_list arg)
 
 	string = va_arg(arg, char*);
 
-	if (str == NULL)
-		str = "(null)";
+	if (string == NULL)
+		string = "(null)";
 
 	while (string[i])
 	{
