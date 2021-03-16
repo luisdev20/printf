@@ -15,3 +15,7 @@ _Printf \ - print formated output
 
 int _printf(const char *format. ...);
 
+.Sh Description
+
+This _printf() function produces an output having in acount a some formats indicated by some characters.
+
