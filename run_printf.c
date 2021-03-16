@@ -20,7 +20,7 @@ int run_printf(const char *format, conversion_t tipos[], va_list arg)
 			j = 0;
 			while (tipos[j].symbol != NULL)
 			{
-				if (format[i + 1] == *tipos[j].symbol)
+				if (format[i + 1] == tipos[j].symbol[0])
 				{
 					r_val = tipos[j].print(arg);
 					if (r_val == -1)
