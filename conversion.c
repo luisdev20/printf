@@ -50,3 +50,42 @@ int print_percent(__attribute__((unused))va_list arg)
 	isnot_putchar('%');
 	return (1);
 }
+
+/**
+ * print_integer - Function to print integers.
+ * @arg: Aditional arguments given to the function.
+ *
+ * Return: A total count of the characters printed.
+ */
+int print_integer(va_list arg)
+{
+	int n, num, div = 1, digit_count = 1, len = 0;
+
+	n = va_arg(arg, int);
+
+	if (n < 0)
+	{
+		isnot_putchar('-');
+		num = n * (-1);
+		len++;
+	}
+	else
+		num = n;
+
+	while (div <= num / 10)
+	{
+		digit_count++;
+		div = div * 10;
+	}
+
+	while (digit_count > 0)
+	{
+		isnot_putchar('0' + num / div);
+		num = num % div;
+		div = div / 10;
+		digit_count--;
+		len++;
+	}
+
+	return (len);
+}
