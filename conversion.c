@@ -90,3 +90,42 @@ int print_integer(va_list arg)
 
 	return (len);
 }
+
+/**
+ * print_binary - Function to print integers in binary from decimal.
+ * @arg: Aditional arguments given to the function.
+ *
+ * Return: A total count of the characters printed.
+ */
+int print_binary(va_list arg)
+{
+	unsigned int n, div = 1, bin = 0, num;
+	int len = 0, digit_count = 1, rem, i = 1;
+
+	n = va_arg(arg, unsigned int);
+
+	while (n != 0)
+	{
+		rem = n % 2;
+		n = n / 2;
+		bin = bin + rem * i;
+		i = i * 10;
+	}
+
+	num = bin;
+	while (div <= num / 10)
+	{
+		digit_count++;
+		div = div * 10;
+	}
+
+	while (digit_count > 0)
+	{
+		isnot_putchar('0' + num / div);
+		num = num % div;
+		div = div / 10;
+		digit_count--;
+		len++;
+	}
+	return (len);
+}
