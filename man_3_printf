@@ -11,3 +11,7 @@ _Printf \ - print formated output
 
 .B _printf - This function needs to include "holberton.h" header.
 
+#include "holberton.h"
+
+int _printf(const char *format. ...);
+
