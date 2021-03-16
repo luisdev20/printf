@@ -19,3 +19,7 @@ int _printf(const char *format. ...);
 
 This _printf() function produces an output having in acount a some formats indicated by some characters.
 
+.SH Return value
+
+After gettin  succes in execution this functions return the number of character printed.
+
