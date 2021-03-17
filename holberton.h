@@ -29,5 +29,5 @@ unsigned int base_len(unsigned int num, int base);
 void write_base(char *str);
 char *rev_string(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
-
+int rot13(va_list list);
 #endif /* HOLBERTON_H */
