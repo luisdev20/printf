@@ -37,9 +37,13 @@ when a character is specified by putting a previous percent symbol it says the f
 
 .Sh The flag characters
 
-these are the main flags this function uses to print formated output:
+These are the main flags this function uses to print formated output:
 
 .It c
 
 gives a character formated to the standard out.
+
+.It s
+
+show a string of characters wichc are pointed by *s.
 
