@@ -54,3 +54,7 @@ if a percent symbol is placed next to the format especifier wich is an other per
 .It d
 
 this flag provides the output of integer  decimal base 10.
+
+.It i
+
+as was said below this flag shows integer values also in base 10.
