@@ -19,7 +19,6 @@ int _printf(const char *format, ...)
 		{"i", print_integer},
 		{"b", print_binary},
 		{"R", rot13},
-		{"r", print_rev},
 		{NULL, NULL},
 	};
 
