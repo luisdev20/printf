@@ -58,3 +58,8 @@ this flag provides the output of integer  decimal base 10.
 .It i
 
 as was said below this flag shows integer values also in base 10.
+
+.Sh AUTHOR
+
+Luis Escobedo and Ronald Altamirano (HOLBERTON SCHOOLS)
+
