@@ -91,54 +91,7 @@ int print_integer(va_list arg)
 	return (len);
 }
 
-/**
- * print_binary - Function to print integers in binary from decimal.
- * @arg: Aditional arguments given to the function.
- *
- * Return: A total count of the characters printed.
- */
-int print_binary(va_list arg)
-{
-	unsigned int num;
-	int i, len;
-	char *str;
-	char *rev_str;
 
-	num = va_arg(arg, unsigned int);
-	if (num == 0)
-		return (isnot_putchar('0'));
-	if (num < 1)
-		return (-1);
-
-
-	len = base_len(num, 2);
-	str = malloc(sizeof(char) * len + 1);
-	if (str == NULL)
-		return (-1);
-
-	for (i = 0; num > 0; i++)
-	{
-		if (num % 2 == 0)
-			str[i] = '0';
-		else
-			str[i] = '1';
-		num = num / 2;
-	}
-	str[i] = '\0';
-	rev_str = rev_string(str);
-	if (rev_str == NULL)
-		return (-1);
-	write_base(rev_str);
-	free(str);
-	free(rev_str);
-	return (len);
-}
-
-/**
- * rot13 - Converts string to rot13
- * @list: string to convert
- * Return: converted string
- */
 int rot13(va_list list)
 {
         int i;
