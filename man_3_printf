@@ -42,25 +42,29 @@ These are the main flags this function uses to print formated output:
 
 .It c
 
-gives a character formated to the standard out.
+Gives a character formated to the standard out.
 
 .It s
 
-show a string of characters wichc are pointed by *s.
+Show a string of characters wichc are pointed by *s.
 
 .It %
 
-if a percent symbol is placed next to the format especifier wich is an other percent symbol the out put will be the percent character.
+If a percent symbol is placed next to the format especifier wich is an other percent symbol the out put will be the percent character.
 
 .It d
 
-this flag provides the output of integer  decimal base 10.
+This flag provides the output of integer  decimal base 10.
 
 .It i
 
-as was said below this flag shows integer values also in base 10.
+As was said below this flag shows integer values also in base 10.
 
 .Sh AUTHOR
 
 Luis Escobedo and Ronald Altamirano (HOLBERTON SCHOOLS)
+
+.SH COPYRIGHT
+
+This is a free software.
 
