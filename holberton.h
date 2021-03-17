@@ -30,4 +30,6 @@ void write_base(char *str);
 char *rev_string(char *s);
 char *_memcpy(char *dest, char *src, unsigned int n);
 int rot13(va_list list);
+int print_rev(va_list arg);
+
 #endif /* HOLBERTON_H */
