@@ -99,33 +99,37 @@ int print_integer(va_list arg)
  */
 int print_binary(va_list arg)
 {
-	unsigned int n, div = 1, bin = 0, num;
-	unsigned int len = 0, digit_count = 1, rem, i = 1;
+	unsigned int num;
+	int i, len;
+	char *str;
+	char *rev_str;
 
-	n = va_arg(arg, unsigned int);
+	num = va_arg(arg, unsigned int);
+	if (num == 0)
+		return (isnot_putchar('0'));
+	if (num < 1)
+		return (-1);
 
-	while (n != 0)
+
+	len = base_len(num, 2);
+	str = malloc(sizeof(char) * len + 1);
+	if (str == NULL)
+		return (-1);
+
+	for (i = 0; num > 0; i++)
 	{
-		rem = n % 2;
-		n = n / 2;
-		bin = bin + rem * i;
-		i = i * 10;
+		if (num % 2 == 0)
+			str[i] = '0';
+		else
+			str[i] = '1';
+		num = num / 2;
 	}
-
-	num = bin;
-	while (div <= num / 10)
-	{
-		digit_count++;
-		div = div * 10;
-	}
-
-	while (digit_count > 0)
-	{
-		isnot_putchar('0' + num / div);
-		num = num % div;
-		div = div / 10;
-		digit_count--;
-		len++;
-	}
+	str[i] = '\0';
+	rev_str = rev_string(str);
+	if (rev_str == NULL)
+		return (-1);
+	write_base(rev_str);
+	free(str);
+	free(rev_str);
 	return (len);
 }

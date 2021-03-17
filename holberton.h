@@ -25,5 +25,9 @@ int print_percent(__attribute__((unused))va_list arg);
 int print_integer(va_list arg);
 int print_binary(va_list arg);
 int run_printf(const char *format, conversion_t tipos[], va_list arg);
+unsigned int base_len(unsigned int num, int base);
+void write_base(char *str);
+char *rev_string(char *s);
+char *_memcpy(char *dest, char *src, unsigned int n);
 
 #endif /* HOLBERTON_H */
