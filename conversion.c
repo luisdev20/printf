@@ -133,3 +133,35 @@ int print_binary(va_list arg)
 	free(rev_str);
 	return (len);
 }
+
+/**
+ * rot13 - Converts string to rot13
+ * @list: string to convert
+ * Return: converted string
+ */
+int rot13(va_list list)
+{
+        int i;
+        int x;
+        char *str;
+        char s[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        char u[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+
+        str = va_arg(list, char *);
+        if (str == NULL)
+                return (-1);
+        for (i = 0; str[i] != '\0'; i++)
+        {
+                for (x = 0; x <= 52; x++)
+                {
+                        if (str[i] == s[x])
+                        {
+                                isnot_putchar(u[x]);
+                                break;
+                        }
+                }
+                if (x == 53)
+                        isnot_putchar(str[i]);
+        }
+        return (i);
+}
