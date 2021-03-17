@@ -47,3 +47,6 @@ gives a character formated to the standard out.
 
 show a string of characters wichc are pointed by *s.
 
+.It %
+
+if a percent symbol is placed next to the format especifier wich is an other percent symbol the out put will be the percent character.
