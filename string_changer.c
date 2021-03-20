@@ -10,15 +10,15 @@
  */
 int print_S(va_list arg)
 {
-        char *string, *hex = "0123456789ABCDEF";
+	char *string, *hex = "0123456789ABCDEF";
 	int i = 0;
 
-        string = va_arg(arg, char*);
+	string = va_arg(arg, char*);
 
-        if (string == NULL)
-                string = "(null)";
+	if (string == NULL)
+		string = "(null)";
 
-        for (i = 0; string[i] != '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
 		if (string[i] < 32 || string[i] >= 127)
 		{
@@ -34,6 +34,5 @@ int print_S(va_list arg)
 
 		isnot_putchar(string[i]);
 	}
-        return (i);
+	return (i);
 }
-
