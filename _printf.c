@@ -20,6 +20,12 @@ int _printf(const char *format, ...)
 		{"b", print_binary},
 		{"r", print_rev},
 		{"R", rot13},
+		{"u", unsigned_integer},
+		{"o", print_octal},
+		{"x", print_hex},
+		{"X", print_HEX},
+		{"S", print_S},
+		{"p", print_hex},
 		{NULL, NULL},
 	};
 
